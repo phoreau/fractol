@@ -6,3 +6,6 @@ Compile
 ```
 make
 ```
+
+## Useful links
+* [Mandlebrot Set Tutorial](https://www.youtube.com/watch?v=0YaYmyfy9Z4) - YouTube

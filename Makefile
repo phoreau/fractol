@@ -10,7 +10,7 @@
 #                                                                              #
 #******************************************************************************#
 
-NAME		=	fdf
+NAME		=	fractol
 
 INC_PATH	= ./libft/include/
 LIB_PATH	= ./libft/
@@ -20,7 +20,7 @@ CC 			= gcc -g -Wall -Wextra -Werror
 AR 			= AR
 
 CCFLAGS 	= 
-INC 		= ./includes/fdf.h
+INC 		= ./includes/fractol.h
 
 LIBFT 		= ./libft
 LIBFT_A 	= libft.a
@@ -33,15 +33,6 @@ MLX_C_ALL 	= $(MLX_MAC) -framework OpenGL -framework Appkit
 
 LIB_M_ALL 	= $(LIBFT_ALL) $(MLX_C_ALL)
 SRCS		= src/main.c \
-			src/ft_parse.c \
-			src/ft_store.c \
-			src/ft_draw_1.c \
-			src/ft_draw_2.c \
-			src/ft_start.c \
-			src/ft_environment.c \
-			src/ft_rotate.c \
-			src/ft_translate.c \
-			src/ft_modify_z.c \
 
 INCLUDE 	=   -I fdf.h -L $(LIB_PATH) -lft -L $(MLX_PATH) -lmlx -framework OpenGL -framework AppKit
 OBJ			=	${SRCS:.c=.o}
@@ -56,7 +47,7 @@ $(NAME): $(OBJ)
 		@echo "\033[32mCompiled mlx_macros\033[0m"
 		$(CC) $(CCFLAGS) $(INCLUDE) $(OBJ) -o $(NAME)
 
-		@echo "\033[34;1mFDF created\n\033[0m"
+		@echo "\033[34;1mFractol created\n\033[0m"
 
 clean:
 	@/bin/rm -f $(OBJ)
